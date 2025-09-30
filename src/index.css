@@ -21,6 +21,14 @@ h1, h2, h3{
   left: 30%; */
   background: linear-gradient(to bottom, rgba(0, 233, 245, 0.532), #1c3ed786)
 }
-#home{
-  
+.price{
+  @apply rounded-xl p-6 bg-gradient-to-br from-white dark:from-gray-800 shadow 
+    hover:outline hover:outline-purple-700 hover:-translate-y-1 duration-150;
+}
+.premium{
+  @apply w-full dark:border-gray-700 rounded-md px-4 py-2
+      hover:text-indigo-400
+}
+.premium button{
+  @apply hover:bg-gradient-to-bl from-purple-700 to-indigo-400
 }

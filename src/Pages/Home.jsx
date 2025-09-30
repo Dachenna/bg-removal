@@ -54,7 +54,7 @@ const testimonials = [
 
 export const Home = () => {
   return (
-    <main className="min-h-screen relative overflow-x-hidden bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+    <main id="home" className="min-h-screen relative overflow-x-hidden bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
       {/* Fixed center orb (behind everything). Large, soft, low-opacity — pointer-events disabled */}
       <div
         aria-hidden="true"
@@ -107,9 +107,9 @@ export const Home = () => {
         {/* Right: uploader / showcase card */}
         <div className="z-10 flex justify-center">
           <div className="w-full max-w-md bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6">
-            <div className="bg-gray-100 dark:bg-gray-900 rounded-lg p-4 flex items-center justify-center h-48">
+            <div className="bg-gray-100 dark:bg-gray-900 rounded-lg p-4 flex items-center justify-center h-61">
               <img
-                src="https://images.unsplash.com/photo-1560343090-f0409e92791a?q=80&w=764&auto=format&fit=crop"
+                src="https://plus.unsplash.com/premium_vector-1744104216555-5a97c3be4b60?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Uploader preview"
                 className="object-cover rounded-md h-full w-full"
                 loading="lazy"
@@ -120,7 +120,7 @@ export const Home = () => {
               <label className="block text-sm font-medium mb-2">Upload an image</label>
               <div className="flex gap-2">
                 <input type="file" aria-label="Upload image" className="sr-only" />
-                <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Upload</button>
+                <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg hover:translate-y-1 duration-150">Upload</button>
                 <button className="border border-gray-200 dark:border-gray-700 px-4 py-2 rounded-lg">Paste URL</button>
               </div>
               <p className="text-xs text-gray-500 mt-2">Supports PNG, JPG. We keep uploads private for 24 hours.</p>
@@ -147,48 +147,54 @@ export const Home = () => {
       </section>
 
       {/* Examples */}
-      <section id="examples" className="max-w-7xl mx-auto px-6 py-12 z-10">
-        <h2 className="text-2xl font-semibold mb-6">Examples of backgrounds removed</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="rounded-xl bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 p-6 shadow">
-            <div className="h-40 bg-gray-100 dark:bg-gray-800 rounded-md flex items-center justify-center">
-              <svg width="80" height="80" fill="none" stroke="#cbd5e1" strokeWidth="2" viewBox="0 0 24 24">
-                <rect x="3" y="3" width="18" height="18" rx="4"/>
-                <path d="M8 17c0-2.5 2-4.5 4-4.5s4 2 4 4.5"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
+        <section id="examples" className="max-w-7xl mx-auto px-6 py-12 z-10">
+          <h2 className="text-2xl font-semibold mb-6">Examples of backgrounds removed</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="rounded-xl bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 p-6 shadow">
+          <div className="h-50 bg-gray-100 dark:bg-gray-800 rounded-md flex items-center justify-center overflow-hidden">
+            <div className="z-20">
+              <img
+               src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+               alt="Male portrait"
+               className="h-full w-auto object-contain"
+              />
             </div>
-            <div className="mt-4 font-medium">Portrait</div>
-            <div className="text-sm text-gray-500">Clean headshots for profiles and resumes.</div>
           </div>
-
-          <div className="rounded-xl bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 p-6 shadow">
-            <div className="h-40 bg-gray-100 dark:bg-gray-800 rounded-md flex items-center justify-center">
-              <svg width="80" height="80" fill="none" stroke="#cbd5e1" strokeWidth="2" viewBox="0 0 24 24">
-                <rect x="3" y="3" width="18" height="18" rx="4"/>
-                <path d="M8 17c0-2.5 2-4.5 4-4.5s4 2 4 4.5"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
+          <div className="mt-4 font-medium">Portrait</div>
+          <div className="text-sm text-gray-500">Clean headshots for profiles and resumes.</div>
             </div>
-            <div className="mt-4 font-medium">Product</div>
-            <div className="text-sm text-gray-500">E-commerce ready, transparent backgrounds.</div>
-          </div>
 
-          <div className="rounded-xl bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 p-6 shadow">
-            <div className="h-40 bg-gray-100 dark:bg-gray-800 rounded-md flex items-center justify-center">
-              <svg width="80" height="80" fill="none" stroke="#cbd5e1" strokeWidth="2" viewBox="0 0 24 24">
-                <rect x="3" y="3" width="18" height="18" rx="4"/>
-                <path d="M8 17c0-2.5 2-4.5 4-4.5s4 2 4 4.5"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
+            <div className="rounded-xl bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 p-6 shadow">
+          <div className="h-50 bg-gray-100 dark:bg-gray-800 rounded-md flex items-center justify-center overflow-hidden">
+            <div className="z-20">
+              <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=698&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+              alt="Product Shoe" 
+              className="h-full w-auto object-contain"
+              loading="lazy"
+            />
             </div>
-            <div className="mt-4 font-medium">Real Estate</div>
-            <div className="text-sm text-gray-500">Focus on the property — remove distracting backgrounds.</div>
           </div>
-        </div>
-      </section>
+          <div className="mt-4 font-medium">Product</div>
+          <div className="text-sm text-gray-500">E-commerce ready, transparent backgrounds.</div>
+            </div>
 
-      {/* Testimonials */}
+            <div className="rounded-xl bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 p-6 shadow">
+          <div className="h-40 bg-gray-100 dark:bg-gray-800 rounded-md flex items-center justify-center overflow-hidden">
+           <div className="z-20">
+            <img src="https://www.rawpixel.com/image/3821516/illustration-png-face-sticker-mockup#eyJrZXlzIjoibWFuIGZhY2UiLCJzb3J0ZWRLZXlzIjoiZmFjZSBtYW4ifQ==" 
+              alt="Real Estate" 
+              className="h-full w-auto object-contain"
+              loading="lazy"
+            />
+           </div>
+          </div>
+          <div className="mt-4 font-medium">Real Estate</div>
+          <div className="text-sm text-gray-500">Focus on the property — remove distracting backgrounds.</div>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials */}
       <section className="max-w-7xl mx-auto px-6 py-12 z-10">
         <h2 className="text-2xl font-semibold mb-6">What our users say</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -213,40 +219,62 @@ export const Home = () => {
         <p className="text-gray-600 dark:text-gray-400 mb-6">Flexible plans for individuals and teams. Upgrade any time.</p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="rounded-xl p-6 bg-white dark:bg-gray-800 shadow">
+          <div className="rounded-xl p-6 bg-white dark:bg-gray-800 shadow hover:-translate-y-2 duration-200 hover:outline hover:outline-indigo-400 hover:text-indigo-400">
             <div className="text-sm text-gray-500">Starter</div>
             <div className="text-3xl font-bold my-4">$0 <span className="text-base font-normal">/ month</span></div>
-            <ul className="text-sm text-gray-600 mb-6">
+            <ul className="text-sm leading-snug mb-6">
               <li>• 3 images / day</li>
               <li>• Standard quality</li>
               <li>• Basic email support</li>
             </ul>
-            <button className="w-full border border-gray-200 dark:border-gray-700 rounded-md px-4 py-2">Start free</button>
+            <button className="w-full bg-gradient-to-tl from-purple-700 to-blue-600 rounded-md px-4 text-white py-2">Start free</button>
           </div>
 
-          <div className="rounded-xl p-6 bg-gradient-to-r from-white to-blue-50 dark:from-gray-800 dark:to-gray-800 shadow-lg border-2 border-blue-600 transform scale-100 md:scale-100">
-            <div className="text-sm text-gray-700 dark:text-gray-200">Pro</div>
+          <div className="rounded-xl p-6 bg-gradient-to-r from-white to-blue-100 dark:from-gray-800 hover:outline hover:outline-fuchsia-700 hover:text-fuchsia-400 shadow-lg scale-100 md:scale-100 hover:-translate-y-1 duration-200">
+            <div className="flex items-center justify-between">
+              <div className="text-sm text-gray-700 dark:text-gray-200">Pro</div>
+              <span className="text-xs bg-indigo-600 text-white px-2 py-1 rounded-full">Popular</span>
+            </div>
             <div className="text-3xl font-bold my-4">$9 <span className="text-base font-normal">/ month</span></div>
-            <ul className="text-sm text-gray-700 dark:text-gray-300 mb-6">
-              <li>• Unlimited images</li>
+            <ul className="text-sm leading-snug mb-6">
+              <li>• 15 images / day</li>
               <li>• HD quality</li>
               <li>• Priority support</li>
             </ul>
-            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-md px-4 py-2">Upgrade</button>
+            <button className="w-full bg-gradient-to-tr from-rose-500 to-fuchsia-600  text-white rounded-md px-4 py-2">Upgrade</button>
           </div>
 
-          <div className="rounded-xl p-6 bg-white dark:bg-gray-800 shadow">
-            <div className="text-sm text-gray-500">Enterprise</div>
-            <div className="text-3xl font-bold my-4">Contact</div>
-            <ul className="text-sm text-gray-600 mb-6">
-              <li>• Custom SLAs</li>
-              <li>• Bulk uploads & SSO</li>
+          <div className="rounded-xl p-6 bg-white dark:bg-gray-800 shadow-lg premium">
+            <div className="flex items-center justify-between mb-2">
+              <div>
+                <div className="text-sm text-gray-500">Enterprise</div>
+                <div className="text-3xl font-bold my-2">Premium <span className="text-base font-normal">/ Custom</span></div>
+              </div>
+              <div className="text-xs bg-indigo-600 text-white px-2 py-1 rounded-full">Full access</div>
+            </div>
+
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+              Tailored for businesses and teams that need scale, security, and dedicated support.
+            </p>
+
+            <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-2 mb-6">
+              <li>• Unlimited image processing & priority queueing</li>
+              <li>• Dedicated account manager & 24/7 priority support</li>
+              <li>• SLA-backed uptime, custom SLAs available</li>
+              <li>• SSO, SCIM, SOC2 & GDPR compliant data handling</li>
+              <li>• API access, SDKs, and custom integrations</li>
+              <li>• Onboarding, training, and volume pricing</li>
             </ul>
-            <button className="w-full border border-gray-200 dark:border-gray-700 rounded-md px-4 py-2">Contact sales</button>
+
+            <div className="flex gap-3">
+              <button className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md">Contact sales</button>
+              <button className="flex-1 border border-gray-200 dark:border-gray-700 px-4 py-2 rounded-md">Request a demo</button>
+            </div>
+
+            <p className="mt-3 text-xs text-gray-500">Custom contracts and enterprise terms. Pricing starts at $200/month — contact us for a tailored quote.</p>
           </div>
         </div>
       </section>
-
       {/* CTA */}
       <section className="max-w-7xl mx-auto px-6 py-12 flex flex-col items-center z-10">
         <h3 className="text-2xl font-bold mb-3">Ready to remove backgrounds like a pro?</h3>
