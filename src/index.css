@@ -27,7 +27,7 @@ h1, h2, h3{
 }
 .premium{
   @apply w-full dark:border-gray-700 rounded-md px-4 py-2
-      hover:text-indigo-400
+      hover:text-indigo-400 hover:outline hover:outline-purple-700 hover:-translate-y-1 duration-150;
 }
 .premium button{
   @apply hover:bg-gradient-to-bl from-purple-700 to-indigo-400

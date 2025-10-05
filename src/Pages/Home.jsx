@@ -248,7 +248,7 @@ export const Home = () => {
             <div className="flex items-center justify-between mb-2">
               <div>
                 <div className="text-sm text-gray-500">Enterprise</div>
-                <div className="text-3xl font-bold my-2">Premium <span className="text-base font-normal">/ Custom</span></div>
+                <div className="text-3xl font-bold my-2">Premium <span className="text-base font-normal">@ $200 / month</span></div>
               </div>
               <div className="text-xs bg-indigo-600 text-white px-2 py-1 rounded-full">Full access</div>
             </div>
@@ -268,7 +268,7 @@ export const Home = () => {
 
             <div className="flex gap-3">
               <button className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md">Contact sales</button>
-              <button className="flex-1 border border-gray-200 dark:border-gray-700 px-4 py-2 rounded-md">Request a demo</button>
+              <button className="flex-1 border border-gray-200 dark:border-gray-700 px-4 py-2 rounded-md text-white">Request a demo</button>
             </div>
 
             <p className="mt-3 text-xs text-gray-500">Custom contracts and enterprise terms. Pricing starts at $200/month — contact us for a tailored quote.</p>
