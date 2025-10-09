@@ -52,7 +52,7 @@ const testimonials = [
   }
 ];
 
-export const Home = () => {
+export const Home = ({navigate}) => {
   return (
     <main id="home" className="min-h-screen relative overflow-x-hidden bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
       {/* Fixed center orb (behind everything). Large, soft, low-opacity — pointer-events disabled */}
@@ -79,7 +79,9 @@ export const Home = () => {
           </p>
 
           <div className="flex flex-wrap gap-3 items-center">
-            <button className="bg-blue-600 hover:bg-blue-700 hover:-translate-y-1 duration-200 text-white px-6 py-3 rounded-lg font-semibold shadow">
+            <button className="bg-blue-600 hover:bg-blue-700 hover:-translate-y-1 duration-200 
+              text-white px-6 py-3 rounded-lg font-semibold shadow"
+              onClick={() => navigate('/login')}>
               Sign up free
             </button>
             <button className="border border-gray-200 dark:border-gray-700 px-5 py-3 rounded-lg  hover:-translate-x-1 hover:-translate-y-1 duration-150 text-sm text-gray-700 dark:text-gray-200">
@@ -260,10 +262,8 @@ export const Home = () => {
             <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-2 mb-6">
               <li>• Unlimited image processing & priority queueing</li>
               <li>• Dedicated account manager & 24/7 priority support</li>
-              <li>• SLA-backed uptime, custom SLAs available</li>
               <li>• SSO, SCIM, SOC2 & GDPR compliant data handling</li>
               <li>• API access, SDKs, and custom integrations</li>
-              <li>• Onboarding, training, and volume pricing</li>
             </ul>
 
             <div className="flex gap-3">
@@ -280,7 +280,9 @@ export const Home = () => {
         <h3 className="text-2xl font-bold mb-3">Ready to remove backgrounds like a pro?</h3>
         <p className="text-gray-600 dark:text-gray-300 mb-6 text-center max-w-2xl">Join thousands of creators and teams who speed up image production with BGremover.</p>
         <div className="flex gap-3">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md shadow">Get started — it's free</button>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md shadow" onClick={()=> navigate('/login')}>
+            Get started — it's free
+          </button>
           <button className="border border-gray-200 dark:border-gray-700 px-5 py-3 rounded-md">See demo</button>
         </div>
       </section>

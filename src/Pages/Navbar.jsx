@@ -1,7 +1,7 @@
 import React from 'react'
 import { navBar } from '../../Constant'
 
-export const Navbar = () => {
+export const Navbar = ({navigate}) => {
   return (
     <nav className="flex items-center justify-between w-full px-5 py-4">
       <div className='relative'>
@@ -19,7 +19,8 @@ export const Navbar = () => {
         ))}
       </ul>
       <button className=" relative -left-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold 
-        px-5 py-2 rounded-lg shadow transition">Sign Up</button>
+        px-5 py-2 rounded-lg shadow transition"
+        onClick={()=>navigate('/login')}>Sign Up</button>
     </nav>
   )
 }

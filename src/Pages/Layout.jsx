@@ -1,27 +1,23 @@
 "use strict"
-
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 import { Navbar } from './Navbar'
 import { Home } from './Home'
-import { About } from './About'
-import { Pricing } from './Pricing'
-import { NotFound } from './NotFound'
+import { Login } from '../../Auth/Login'
 
-const Layout = () => {
+export const Layout = () => {
+  const navigate = useNavigate();
+  
   return (
-    <BrowserRouter>
+    
       <div>
-        <Navbar />
+        <Navbar navigate={navigate}/>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<Home  navigate= {navigate}/>} />
+          <Route path="/login" element={<Login navigate={navigate}/>} />
         </Routes>
       </div>
-    </BrowserRouter>
   )
 }
 
-export default Layout
+

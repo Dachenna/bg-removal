@@ -1,14 +1,11 @@
-import React from 'react'
-import { Router } from 'react-router-dom'
-import { Navbar } from './Pages/Navbar'
-import { Home } from './Pages/Home'
+import { Layout } from './Pages/Layout'
+import { BrowserRouter } from 'react-router-dom'
 
 const App = () => {
   return (
-    <div>
-      <Navbar />
-      <Home />
-    </div>
+    <BrowserRouter>
+      <Layout />
+    </BrowserRouter>
   )
 }
 
