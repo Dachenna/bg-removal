@@ -1,34 +1,31 @@
+/* typography */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root{
+  --bg-1: #0f1724;
+  --bg-2: #0b1220;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: rgb(37, 53, 67);
+  background: linear-gradient(180deg, rgba(13,18,28,1) 0%, rgba(21,28,39,1) 100%) no-repeat;
+  color: #e6eef8;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
-p{
-  @apply font-body
-}
-h1, h2, h3{
-  @apply font-header
+/* Login background: soft photo + dark gradient overlay for contrast/readability */
+#login{
+  @apply bg-gradient-to-t from-slate-600 to-slate-900 ;
+  background-repeat: no-repeat;
+ 
 }
 
-.circle{
-  /* top: 60%;
-  left: 30%; */
-  background: linear-gradient(to bottom, rgba(0, 233, 245, 0.532), #1c3ed786)
-}
-.price{
-  @apply rounded-xl p-6 bg-gradient-to-br from-white dark:from-gray-800 shadow 
-    hover:outline hover:outline-purple-700 hover:-translate-y-1 duration-150;
-}
-.premium{
-  @apply w-full dark:border-gray-700 rounded-md px-4 py-2
-      hover:text-indigo-400 hover:outline hover:outline-purple-700 hover:-translate-y-1 duration-150;
-}
-.premium button{
-  @apply hover:bg-gradient-to-bl from-purple-700 to-indigo-400
-}
+/* small utility tweaks */
+h1, h2, h3 { @apply font-semibold text-gray-900 dark:text-gray-100; }
+p { @apply text-sm text-gray-600 dark:text-gray-300; }

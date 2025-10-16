@@ -5,7 +5,7 @@ export const Navbar = ({navigate}) => {
   return (
     <nav className="flex items-center justify-between w-full px-5 py-4">
       <div className='relative'>
-        <a href="#home" >
+        <a href="/" >
           <p className='text-2xl font-extrabold tracking-tight text-gray-900 font-header dark:text-gray-200'><span className='text-2xl text-orange-300 dark:text-orange-400'>Pixc</span>lean</p>
         </a>
       </div>
