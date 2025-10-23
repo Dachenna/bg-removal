@@ -54,20 +54,7 @@ const testimonials = [
 
 export const Home = ({navigate}) => {
   return (
-    <main id="home" className="min-h-screen relative overflow-x-hidden bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
-      {/* Fixed center orb (behind everything). Large, soft, low-opacity — pointer-events disabled */}
-      <div
-        aria-hidden="true"
-        className="fixed inset-0 flex items-center justify-center pointer-events-none -z-50"
-      >
-        <div
-          className="w-[62vw] max-w-[680px] h-[62vw] max-h-[680px] rounded-full bg-gradient-to-br from-blue-400 to-indigo-600 opacity-25 filter blur-[90px] transform-gpu animate-[pulse_8s_ease-in-out_infinite]"
-          style={{ willChange: "transform, opacity" }}
-        />
-      </div>
-
-  
-
+    <main  className="min-h-screen relative overflow-x-hidden dark:bg-gray-900 text-gray-800 dark:text-gray-100">
       {/* Hero */}
       <section className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div className="z-10">
@@ -108,7 +95,7 @@ export const Home = ({navigate}) => {
 
         {/* Right: uploader / showcase card */}
         <div className="z-10 flex justify-center">
-          <div className="w-full max-w-md bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6">
+          <div className="w-full max-w-md bg-gray-700 dark:bg-gray-800 rounded-2xl shadow-xl p-6">
             <div className="bg-gray-100 dark:bg-gray-900 rounded-lg p-4 flex items-center justify-center h-61">
               <img
                 src="https://plus.unsplash.com/premium_vector-1744104216555-5a97c3be4b60?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -138,7 +125,7 @@ export const Home = ({navigate}) => {
           {features.map((f, i) => (
             <div
               key={i}
-              className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow hover:shadow-lg transition transform hover:-translate-y-1"
+              className="bg-gray-700 dark:bg-gray-800 rounded-xl p-6 shadow hover:shadow-lg transition transform hover:-translate-y-1"
             >
               <div className="text-blue-600 mb-4">{f.icon}</div>
               <h3 className="font-semibold text-lg mb-1">{f.title}</h3>
@@ -201,7 +188,7 @@ export const Home = ({navigate}) => {
         <h2 className="text-2xl font-semibold mb-6">What our users say</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
-            <div key={i} className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow">
+            <div key={i} className="bg-gray-700 dark:bg-gray-800 rounded-xl p-6 shadow">
               <div className="flex items-center gap-4">
                 <img src={t.avatar} alt={t.name} className="w-12 h-12 rounded-full object-cover border-2 border-blue-50" />
                 <div>
@@ -221,7 +208,7 @@ export const Home = ({navigate}) => {
         <p className="text-gray-600 dark:text-gray-400 mb-6">Flexible plans for individuals and teams. Upgrade any time.</p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="rounded-xl p-6 bg-white dark:bg-gray-800 shadow hover:-translate-y-2 duration-200 hover:outline hover:outline-indigo-400 hover:text-indigo-400">
+          <div className="rounded-xl p-6 bg-gray-700 dark:bg-gray-800 shadow hover:-translate-y-2 duration-200 hover:outline hover:outline-indigo-400 hover:text-indigo-400">
             <div className="text-sm text-gray-500">Starter</div>
             <div className="text-3xl font-bold my-4">$0 <span className="text-base font-normal">/ month</span></div>
             <ul className="text-sm leading-snug mb-6">
@@ -246,13 +233,13 @@ export const Home = ({navigate}) => {
             <button className="w-full bg-gradient-to-tr from-rose-500 to-fuchsia-600  text-white rounded-md px-4 py-2">Upgrade</button>
           </div>
 
-          <div className="rounded-xl p-6 bg-white dark:bg-gray-800 shadow-lg premium">
+          <div className="rounded-xl p-6 bg-gray-700 dark:bg-gray-800 shadow-lg premium">
             <div className="flex items-center justify-between mb-2">
               <div>
                 <div className="text-sm text-gray-500">Enterprise</div>
-                <div className="text-3xl font-bold my-2">Premium <span className="text-base font-normal">@ $200 / month</span></div>
+                <div className="text-3xl font-bold my-2">Premium <span className="text-base font-normal">@ $25 / month</span></div>
               </div>
-              <div className="text-xs bg-indigo-600 text-white px-2 py-1 rounded-full">Full access</div>
+              <div className="text-xs bg-indigo-600 text-white text-start px-2 py-1 rounded-md">Full access</div>
             </div>
 
             <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
@@ -267,8 +254,8 @@ export const Home = ({navigate}) => {
             </ul>
 
             <div className="flex gap-3">
-              <button className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md">Contact sales</button>
-              <button className="flex-1 border border-gray-200 dark:border-gray-700 px-4 py-2 rounded-md text-white">Request a demo</button>
+              <button className="flex-1 bg-gradient-to-bl from-green-500 to-violet-700 text-white px-4 py-2 rounded-md">Contact sales</button>
+              <button className="flex-1 border border-gray-200 dark:border-gray-700  hover:bg-slate-700 px-4 py-2 rounded-md text-white">Request a demo</button>
             </div>
 
             <p className="mt-3 text-xs text-gray-500">Custom contracts and enterprise terms. Pricing starts at $200/month — contact us for a tailored quote.</p>

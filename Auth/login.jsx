@@ -1,55 +1,48 @@
+// import React, { useState } from "react";
+import { FaUser } from "react-icons/fa";
+import { RiLockPasswordLine } from "react-icons/ri";
 
-import React, { useState } from "react";
+export const Login = () => {
 
-export const Login = ({ navigate }) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError("");
-    if (!email || !password) {
-      setError("Please enter both email and password.");
-      return;
-    }
-    setLoading(true);
-    try {
-      // placeholder auth - replace with real API call
-      await new Promise((r) => setTimeout(r, 700));
-      if (navigate) navigate("/");
-      else console.log("Signed in (dev):", email);
-    } catch (err) {
-      setError("Sign in failed. Try again.");
-    } finally {
-      setLoading(false);
-    }
-  };
 
   return (
-    <main className="wrapper">
-      <form action="">
-        <h1>Login</h1>
-        <div className="input-box">
-          <input type="text" placeholder="Username"  required/>
-        </div>
+    <main className="relative min-h-screen flex items-center justify-center complete">
+      <div className="wrapper">
+        <div className="form-box login">
+          <div className=" text-center">
+             <h1 className="font-header text-2xl mb-4">Login</h1>
+             <p className="font-body">A click to remove the unwanted</p>
+          </div>
 
-        <div className="input-box">
-          <input type="password" placeholder="Password"  required/>
-        </div>
+          <form action="">
+            <div className="input-box">
+              <span className="icons"><FaUser /></span>
+              <input type="email" required  placeholder="youremail@gmail.com"/>
+              <label className="ml-2">Email</label>
+            </div>
 
-        <div className="remeber">
-          <label><input type="checkbox" />Remeber me</label>
-          <a href="#">Forget Password</a>
-        </div>
+            <div className="input-box">
+              <span className="icons"><RiLockPasswordLine /></span>
+              <input type="password" required placeholder="••••" />
+              <label className="ml-2">Password</label>
+            </div>
 
-        <button type="submit">Login</button>
-
-        <div className="register-link">
-          <p>Don't have an account <a href="#">Register</a></p>
+            <div className="remeber">
+              <label >
+                <input type="checkbox" />
+                Remeber Password
+              </label>
+              <a href="#">Forgot Password?</a>
+            </div>
+          </form>
+          
+          <button type="submit" className="btn">Login</button>
+          <div className="register">
+            <p>Don't have an account<a href="#" className="register-link"> Register</a></p>
+          </div>
         </div>
-      </form>
+      </div>
+      
     </main>
   );
 };

@@ -3,7 +3,7 @@ import React from 'react'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import { Navbar } from './Navbar'
 import { Home } from './Home'
-import { Login } from '../../Auth/Login'
+import { Login } from '../../Auth/login'
 
 export const Layout = () => {
   const navigate = useNavigate();

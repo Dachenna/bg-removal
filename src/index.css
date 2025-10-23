@@ -12,20 +12,49 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(180deg, rgba(13,18,28,1) 0%, rgba(21,28,39,1) 100%) no-repeat;
-  color: #e6eef8;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
+  @apply dark:text-white
 }
 
-/* Login background: soft photo + dark gradient overlay for contrast/readability */
-#login{
-  @apply bg-gradient-to-t from-slate-600 to-slate-900 ;
-  background-repeat: no-repeat;
- 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* small utility tweaks */
-h1, h2, h3 { @apply font-semibold text-gray-900 dark:text-gray-100; }
-p { @apply text-sm text-gray-600 dark:text-gray-300; }
+h1{
+  @apply font-header font-semibold
+}
+
+p1{
+  @apply  font-normal font-body
+}
+.back{
+  background-color: transparent;
+}
+.premium{
+  @apply hover:border-2 border-blue-300  hover:-translate-y-2 transform duration-150
+}
+.complete{
+  background: url(/login-bg.jpg) no-repeat;
+  background-attachment: fixed;
+  @apply bg-cover
+}
+.wrapper{
+  position: relative;
+ @apply w-[35%]  max-md:w-[65%] px-4 py-3 bg-green-400  rounded-sm ;
+
+}
+
+.input-box {
+  @apply relative font-header
+}
+
+.input-box input{
+  @apply rounded-sm cursor-text
+}
+
+.icons{
+  @apply relative text-black top-5 -left-2 p-3
+}
