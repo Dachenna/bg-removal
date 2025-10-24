@@ -2,7 +2,7 @@
 import { FaUser } from "react-icons/fa";
 import { RiLockPasswordLine } from "react-icons/ri";
 
-export const Login = () => {
+export const Authlog = () => {
 
 
   return (
