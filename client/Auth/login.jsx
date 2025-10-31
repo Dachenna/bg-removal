@@ -8,6 +8,19 @@ export const Authlog = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  function Change(type){
+    this.type = type
+  };
+
+  Change.prototype.edit = function(){
+    return `${this.type} is a type of data`
+  };
+
+  let event = new Change("Boolean");
+
+  console.log(event.edit());
+  
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     setError("");

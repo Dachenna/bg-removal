@@ -43,7 +43,7 @@ button{
 /* page background / hero */
 .complete{
   background-image:
-    linear-gradient(rgba(7,12,23,0.55), rgba(7,12,23,0.55)),
+    linear-gradient(rgba(12, 21, 40, 0.55), rgba(5, 50, 149, 0.55)),
     url('/blue-bg.jpg');
   background-attachment: fixed;
   background-size: cover;
@@ -179,6 +179,37 @@ button{
   font-weight: 600;
 }
 
+/* Navbar specific styles */
+nav {
+  z-index: 50;
+}
+
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--accent);
+  transition: width 0.2s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Add to your existing responsive adjustments */
+@media (max-width: 768px) {
+  nav .max-w-7xl {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
 /* responsive adjustments */
 @media (max-width: 1024px) {
   .wrapper { width: 66%; max-width: 520px; min-width: auto; }
