@@ -153,9 +153,9 @@ export const Home = ({navigate}) => {
           <div className="text-sm text-gray-500">Clean headshots for profiles and resumes.</div>
             </div>
 
-            <div className="rounded-xl bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 p-6 shadow">
-          <div className="h-50 bg-gray-100 dark:bg-gray-800 rounded-md flex items-center justify-center overflow-hidden">
-            <div className="z-20">
+          <div className="rounded-xl bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 p-6 shadow">
+            <div className="h-50 bg-gray-100 dark:bg-gray-800 rounded-md flex items-center justify-center overflow-hidden">
+             <div className="z-20">
               <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=698&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
               alt="Product Shoe" 
               className="h-full w-auto object-contain"
@@ -168,9 +168,9 @@ export const Home = ({navigate}) => {
             </div>
 
             <div className="rounded-xl bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 p-6 shadow">
-          <div className="h-40 bg-gray-100 dark:bg-gray-800 rounded-md flex items-center justify-center overflow-hidden">
+          <div className="h-50 bg-gray-100 dark:bg-gray-800 rounded-md flex items-center justify-center overflow-hidden">
            <div className="z-20">
-            <img src="https://www.rawpixel.com/image/3821516/illustration-png-face-sticker-mockup#eyJrZXlzIjoibWFuIGZhY2UiLCJzb3J0ZWRLZXlzIjoiZmFjZSBtYW4ifQ==" 
+            <img src="https://plus.unsplash.com/premium_photo-1678903964473-1271ecfb0288?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" 
               alt="Real Estate" 
               className="h-full w-auto object-contain"
               loading="lazy"
@@ -276,7 +276,7 @@ export const Home = ({navigate}) => {
 
       {/* Footer */}
       <footer className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center border-t border-gray-200 dark:border-gray-700 text-sm text-gray-500 z-10">
-        <span>© {new Date().getFullYear()} BGremover. All rights reserved.</span>
+        <span>© {new Date().getFullYear()} Pixclean. All rights reserved.</span>
         <div className="flex gap-4 mt-4 md:mt-0">
           <a href="#" className="hover:text-blue-600">Privacy</a>
           <a href="#" className="hover:text-blue-600">Terms</a>

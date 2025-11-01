@@ -20,7 +20,7 @@ export const Authlog = () => {
 
   console.log(event.edit());
   
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setError("");
@@ -34,7 +34,7 @@ export const Authlog = () => {
 
   return (
     <main className="relative min-h-screen flex items-center justify-center complete">
-      <div className="wrapper">
+      <div className="wrapper backdrop-blur-sm shadow-sm">
         <div className="form-box login" role="region" aria-labelledby="login-title">
           <div className="text-center mb-6">
             <h1 id="login-title" className="font-header text-2xl mb-1">Login</h1>
@@ -77,11 +77,7 @@ export const Authlog = () => {
             </div>
 
             <div className="remeber flex items-center justify-between text-sm">
-              <label className="flex items-center gap-2">
-                <input type="checkbox" className="checkbox" />
-                <span>Remember password</span>
-              </label>
-              <a href="#" className="text-blue-600 hover:underline">Forgot password?</a>
+              <a href="#" className="text-blue-600 mb-2 hover:underline">Forgot password?</a>
             </div>
 
             {error && <div className="text-sm text-red-600">{error}</div>}
@@ -89,8 +85,8 @@ export const Authlog = () => {
             <button type="submit" className="btn w-full mt-1">Login</button>
           </form>
 
-          <div className="register mt-5 text-center text-sm">
-            <p>Don't have an account? <a href="#" className="register-link text-blue-600 hover:underline">Register</a></p>
+          <div className=" py-2 text-center text-sm">
+            <p>Don't have an account? <a href="/signup" className="register-link text-blue-600 hover:underline">Register</a></p>
           </div>
         </div>
       </div>

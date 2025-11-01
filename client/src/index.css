@@ -70,7 +70,8 @@ button{
   background: var(--card);
   color: #0b1220;
   border-radius: 12px;
-  padding: 1.25rem;
+  padding:1rem;
+  padding-bottom: 2rem;
   box-shadow: 0 10px 30px rgba(2,6,23,0.5);
   border: 1px solid rgba(255,255,255,0.6);
   backdrop-filter: blur(8px);
@@ -88,11 +89,13 @@ button{
 .input-box {
   position: relative;
   display: flex;
+  margin-bottom: 0.8rem;
   align-items: center;
 }
 
 .input-box + .input-box {
   margin-top: 0.75rem;
+  margin-bottom: 0.8rem;
 }
 
 .icons {
@@ -138,11 +141,6 @@ button{
   color: rgba(15,23,42,0.45);
   @apply dark:text-white;
   pointer-events: none;
-}
-
-/* remember row */
-.remeber {
-  margin-top: 0.25rem;
 }
 
 /* checkbox */
@@ -216,6 +214,6 @@ nav a:hover::after {
 }
 @media (max-width: 520px) {
   .wrapper { width: 92%; padding: 0.5rem; }
-  .form-box { padding: 0.85rem; }
+  .form-box { padding: 0.90rem; }
   .floating { display: none; }
 }
