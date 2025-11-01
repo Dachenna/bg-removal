@@ -8,18 +8,6 @@ export const Authlog = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  function Change(type){
-    this.type = type
-  };
-
-  Change.prototype.edit = function(){
-    return `${this.type} is a type of data`
-  };
-
-  let event = new Change("Boolean");
-
-  console.log(event.edit());
-  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -86,7 +74,7 @@ export const Authlog = () => {
           </form>
 
           <div className=" py-2 text-center text-sm">
-            <p>Don't have an account? <a href="/signup" className="register-link text-blue-600 hover:underline">Register</a></p>
+            <p>Don't have an account? <a href="/signup" className="register-link text-blue-600 hover:underline">Signup</a></p>
           </div>
         </div>
       </div>
